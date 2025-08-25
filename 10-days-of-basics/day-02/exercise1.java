@@ -1,18 +1,24 @@
 import java.util.Arrays;
 
 public class Exercise1 {
-    public static void main(String[] args) {
+public static void main(String[] args) {
         // Exercise 1: Array Creation and Access
         
         // TODO: Create an array of numbers
         // 1. Create an int array named 'numbers' with values 1, 2, 3, 4, 5
+        int[] numbers = {1, 2, 3, 4, 5};
         
         // TODO: Access array elements
         // 1. Print the entire array using Arrays.toString()
+        System.out.println("Numbers: " + Arrays.toString(numbers));
         // 2. Print the first element (index 0)
+        System.out.println("First number: " + numbers[0]);
         // 3. Print the last element (use numbers.length - 1)
+        System.out.println("Last number: " + (numbers[numbers.length - 1]));
         // 4. Print the third element (index 2)
+        System.out.println("Third number: " + numbers[2]);
         // 5. Print the length of the array
+        System.out.println("Array length:" + numbers.length);
         
         // Expected output:
         // Numbers: [1, 2, 3, 4, 5]
