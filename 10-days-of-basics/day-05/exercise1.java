@@ -12,7 +12,7 @@ public class Exercise1 {
 
         // TODO: Calculate the sum of numbers
         // 1) Create a variable to store the sum (initialize to 0)
-        int sum = 0;
+        int sum =0;
 
         // 2) Use another for loop to iterate from 1 to 5
         // 3) Add each number to the sum
