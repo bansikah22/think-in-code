@@ -9,11 +9,14 @@ console.log("Printing Triangle");
 //    - Create a string with "*" for each column
 //    - Use console.log to print the string for e
 for ( var i = 1; i <= 5; i++) {
- for ( var j = 1; j <= i; j++) {
-    console.log("*")
- }
- console.log("\n")
+    let row ="";
+    for (var j = 1; j <= i; j++) {
+        row +="*";
+    }
+    console.log(row);
 }
+
+ 
 // TODO: Print square pattern
 // 1. Use console.log to print a blank line
 console.log("Printing square");
@@ -24,10 +27,12 @@ console.log("Printing square");
 //    - Create a string with "*" for each column
 //    - Use console.log to print the string for each row
 for (var i =1; i <= 5; i++) {
+    let row ="";
     for ( var j = 1; j <= 5; j++) {
-        console.log("*");
+    row +="*";
+
     }
-    console.log("\n")
+    console.log(row);
 }
 
 // Expected output:
