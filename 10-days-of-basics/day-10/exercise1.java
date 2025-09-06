@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise1 {
+class Exercise1 {
     public static void main(String[] args) {
         // Exercise 1: Basic Calculator Operations
         

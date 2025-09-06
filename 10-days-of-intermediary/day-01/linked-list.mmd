@@ -1,0 +1,25 @@
+graph LR
+    A[Head] --> B[Node 1: 10]
+    B --> C[Node 2: 20]
+    C --> D[Node 3: 30]
+    D --> E[Node 4: 40]
+    E --> F[null/Tail]
+    
+    style A fill:#e1f5fe
+    style F fill:#ffebee
+    style B fill:#f3e5f5
+    style C fill:#f3e5f5
+    style D fill:#f3e5f5
+    style E fill:#f3e5f5
+
+    %% Adding operation examples
+    subgraph "Operations"
+        G[Add: 25 at index 1]
+        H[Remove: 20]
+        I[Search: 30]
+    end
+    
+    %% Styling operation nodes
+    style G fill:#e8f5e8
+    style H fill:#fff3e0
+    style I fill:#fce4ec

@@ -1,0 +1,36 @@
+classDiagram
+    class Animal {
+        +String name
+        +getName()
+        +makeSound()
+    }
+    
+    class Dog {
+        +String breed
+        +getBreed()
+        +makeSound()
+    }
+    
+    class Cat {
+        +String breed
+        +getBreed()
+        +makeSound()
+    }
+    
+    Animal <|-- Dog
+    Animal <|-- Cat
+    
+    note for Animal "Base class with common properties"
+    note for Dog "Inherits from Animal, overrides makeSound()"
+    note for Cat "Inherits from Animal, overrides makeSound()"
+
+    %% Polymorphism example
+    class Client {
+        +processAnimal(Animal)
+    }
+    
+    Client --> Animal : "Uses Animal reference"
+    
+    note for Client "Same interface, different behavior"
+    note for Dog "makeSound() returns 'Woof!'"
+    note for Cat "makeSound() returns 'Meow!'"

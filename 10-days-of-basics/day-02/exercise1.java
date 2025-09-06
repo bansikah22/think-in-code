@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Exercise1 {
+class Exercise1 {
 public static void main(String[] args) {
         // Exercise 1: Array Creation and Access
         

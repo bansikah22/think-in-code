@@ -1,0 +1,53 @@
+graph LR
+    subgraph "Input Phase"
+        A1[Input File: numbers.txt]
+        A2[File Reader]
+        A3[Raw Data: 1, 2, 3, 4, 5...]
+        
+        A1 --> A2 --> A3
+    end
+    
+    subgraph "Processing Phase"
+        B1[Data Parser]
+        B2[Data Processing]
+        B3[Calculations & Transformations]
+        
+        B1 --> B2 --> B3
+    end
+    
+    subgraph "Output Phase"
+        C1[Formatted Results]
+        C2[File Writer]
+        C3[Output File: results.txt]
+        
+        C1 --> C2 --> C3
+    end
+    
+    A3 --> B1
+    B3 --> C1
+    
+    %% Error handling paths
+    subgraph "Error Handling"
+        D1[File Not Found]
+        D2[Permission Denied]
+        D3[Invalid Data Format]
+        D4[Graceful Error Messages]
+    end
+    
+    A2 -.-> D1
+    A2 -.-> D2
+    B1 -.-> D3
+    D1 --> D4
+    D2 --> D4
+    D3 --> D4
+    
+    %% Styling
+    style A1 fill:#e3f2fd
+    style A3 fill:#f3e5f5
+    style B2 fill:#fff3e0
+    style C1 fill:#e8f5e8
+    style C3 fill:#e8f5e8
+    style D1 fill:#ffebee
+    style D2 fill:#ffebee
+    style D3 fill:#ffebee
+    style D4 fill:#e8f5e8

@@ -1,0 +1,56 @@
+classDiagram
+    class GenericContainer~T~ {
+        -T data
+        +GenericContainer(T data)
+        +setData(T data)
+        +T getData()
+        +boolean isEmpty()
+        +String getType()
+    }
+    
+    class StringContainer {
+        -String data
+        +StringContainer(String data)
+        +setData(String data)
+        +String getData()
+        +boolean isEmpty()
+        +String getType()
+    }
+    
+    class IntegerContainer {
+        -Integer data
+        +IntegerContainer(Integer data)
+        +setData(Integer data)
+        +Integer getData()
+        +boolean isEmpty()
+        +String getType()
+    }
+    
+    class CustomContainer {
+        -Person data
+        +CustomContainer(Person data)
+        +setData(Person data)
+        +Person getData()
+        +boolean isEmpty()
+        +String getType()
+    }
+    
+    class Person {
+        -String name
+        -int age
+        +Person(String name, int age)
+        +getName()
+        +getAge()
+        +toString()
+    }
+    
+    GenericContainer~T~ <|-- StringContainer
+    GenericContainer~T~ <|-- IntegerContainer
+    GenericContainer~T~ <|-- CustomContainer
+    CustomContainer --> Person
+    
+    note for GenericContainer~T~ "Generic base class - T is type parameter"
+    note for StringContainer "Specialized for String type"
+    note for IntegerContainer "Specialized for Integer type"
+    note for CustomContainer "Specialized for Person type"
+    note for Person "Custom object for testing generics"

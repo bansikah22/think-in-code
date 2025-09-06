@@ -1,0 +1,47 @@
+graph LR
+    subgraph "Linear Search"
+        C1[Array: 11, 12, 22, 25, 34, 64, 90]
+        C2[Search for 25]
+        C3[Check each element: 11❌, 12❌, 22❌, 25✅]
+        C4[Found at index 3]
+        
+        C1 --> C2 --> C3 --> C4
+    end
+    
+    subgraph "Binary Search"
+        D1[Sorted Array: 11, 12, 22, 25, 34, 64, 90]
+        D2[Search for 25]
+        D3[Middle: 25 ✅]
+        D4[Found at index 3]
+        
+        D1 --> D2 --> D3 --> D4
+    end
+    
+    subgraph "Binary Search Steps"
+        E1[Start: 11, 12, 22, 25, 34, 64, 90]
+        E2[Middle = 25, target = 25 ✅]
+        E3[Found!]
+        
+        E1 --> E2 --> E3
+    end
+    
+    subgraph "Binary Search - Not Found"
+        F1[Start: 11, 12, 22, 25, 34, 64, 90]
+        F2[Search for 99]
+        F3[Middle = 25, 99 > 25, go right]
+        F4[Middle = 64, 99 > 64, go right]
+        F5[Middle = 90, 99 > 90, go right]
+        F6[Not found]
+        
+        F1 --> F2 --> F3 --> F4 --> F5 --> F6
+    end
+
+    %% Styling
+    style C1 fill:#e3f2fd
+    style C4 fill:#e8f5e8
+    style D1 fill:#e3f2fd
+    style D4 fill:#e8f5e8
+    style E1 fill:#e3f2fd
+    style E3 fill:#e8f5e8
+    style F1 fill:#e3f2fd
+    style F6 fill:#ffebee

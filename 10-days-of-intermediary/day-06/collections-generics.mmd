@@ -1,0 +1,48 @@
+graph TD
+    subgraph "Collection Types"
+        A1[List - Ordered Collection]
+        A2[Set - Unique Elements]
+        A3[Map - Key-Value Pairs]
+        A4[Queue - FIFO Structure]
+        
+        A1 --> A5[ArrayList, LinkedList]
+        A2 --> A6[HashSet, TreeSet]
+        A3 --> A7[HashMap, TreeMap]
+        A4 --> A8[PriorityQueue, ArrayDeque]
+    end
+    
+    subgraph "Common Operations"
+        B1[Add/Insert]
+        B2[Remove/Delete]
+        B3[Search/Find]
+        B4[Iterate/Traverse]
+        
+        B1 --> B5[add(), put()]
+        B2 --> B6[remove(), clear()]
+        B3 --> B7[contains(), get()]
+        B4 --> B8[forEach(), iterator()]
+    end
+    
+    subgraph "Generic Type System"
+        C1[GenericContainer~T~]
+        C2[StringContainer]
+        C3[IntegerContainer]
+        C4[CustomContainer]
+        
+        C1 --> C2
+        C1 --> C3
+        C1 --> C4
+    end
+    
+    style A1 fill:#e3f2fd
+    style A2 fill:#e3f2fd
+    style A3 fill:#e3f2fd
+    style A4 fill:#e3f2fd
+    style B1 fill:#fff3e0
+    style B2 fill:#fff3e0
+    style B3 fill:#fff3e0
+    style B4 fill:#fff3e0
+    style C1 fill:#f3e5f5
+    style C2 fill:#e8f5e8
+    style C3 fill:#e8f5e8
+    style C4 fill:#e8f5e8

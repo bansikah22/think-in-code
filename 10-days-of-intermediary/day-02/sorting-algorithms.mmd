@@ -1,0 +1,38 @@
+graph TD
+    subgraph "Bubble Sort Example"
+        A1[Original: 64, 34, 25, 12, 22, 11, 90]
+        A2[Pass 1: 34, 25, 12, 22, 11, 64, 90]
+        A3[Pass 2: 25, 12, 22, 11, 34, 64, 90]
+        A4[Pass 3: 12, 22, 11, 25, 34, 64, 90]
+        A5[Final: 11, 12, 22, 25, 34, 64, 90]
+        
+        A1 --> A2 --> A3 --> A4 --> A5
+    end
+    
+    subgraph "Selection Sort Example"
+        B1[Original: 64, 34, 25, 12, 22, 11, 90]
+        B2[Find min: 11, swap with 64]
+        B3[Find min: 12, swap with 34]
+        B4[Find min: 22, swap with 25]
+        B5[Final: 11, 12, 22, 25, 34, 64, 90]
+        
+        B1 --> B2 --> B3 --> B4 --> B5
+    end
+    
+    subgraph "Insertion Sort Example"
+        C1[Original: 64, 34, 25, 12, 22, 11, 90]
+        C2[Insert 34: 34, 64, 25, 12, 22, 11, 90]
+        C3[Insert 25: 25, 34, 64, 12, 22, 11, 90]
+        C4[Insert 12: 12, 25, 34, 64, 22, 11, 90]
+        C5[Final: 11, 12, 22, 25, 34, 64, 90]
+        
+        C1 --> C2 --> C3 --> C4 --> C5
+    end
+
+    %% Styling
+    style A1 fill:#e3f2fd
+    style A5 fill:#e8f5e8
+    style B1 fill:#e3f2fd
+    style B5 fill:#e8f5e8
+    style C1 fill:#e3f2fd
+    style C5 fill:#e8f5e8

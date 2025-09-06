@@ -1,0 +1,53 @@
+graph TD
+    subgraph "Map Function"
+        A1[Input Array: 1, 2, 3, 4, 5]
+        A2[Callback: x * 2]
+        A3[Output Array: 2, 4, 6, 8, 10]
+        
+        A1 --> A2 --> A3
+    end
+    
+    subgraph "Filter Function"
+        B1[Input Array: 1, 2, 3, 4, 5]
+        B2[Callback: x % 2 === 0]
+        B3[Output Array: 2, 4]
+        
+        B1 --> B2 --> B3
+    end
+    
+    subgraph "Reduce Function"
+        C1[Input Array: 1, 2, 3, 4, 5]
+        C2[Callback: acc + x, Initial: 0]
+        C3[Output: 15]
+        
+        C1 --> C2 --> C3
+    end
+    
+    subgraph "Function Composition"
+        D1[Original: 1, 2, 3, 4, 5]
+        D2[Filter even: 2, 4]
+        D3[Map double: 4, 8]
+        D4[Reduce sum: 12]
+        
+        D1 --> D2 --> D3 --> D4
+    end
+    
+    subgraph "ForEach Function"
+        E1[Input Array: 1, 2, 3, 4, 5]
+        E2[Callback: console.log]
+        E3[Side Effect: Prints each element]
+        
+        E1 --> E2 --> E3
+    end
+
+    %% Styling
+    style A1 fill:#e3f2fd
+    style A3 fill:#e8f5e8
+    style B1 fill:#e3f2fd
+    style B3 fill:#e8f5e8
+    style C1 fill:#e3f2fd
+    style C3 fill:#e8f5e8
+    style D1 fill:#e3f2fd
+    style D4 fill:#e8f5e8
+    style E1 fill:#e3f2fd
+    style E3 fill:#fff3e0
