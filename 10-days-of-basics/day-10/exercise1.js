@@ -5,6 +5,33 @@
 
 // TODO: Create a simple calculator
 // 1. Create variables to simulate user input (firstNumber, secondNumber, operation)
+const errorMessage ="Division by zero is not allowed";
+
+const error ="Invalid operator";
+
+function calculate(firstNumber, secondNumber, operator) {
+    switch (operator) {
+        case "*":
+            return firstNumber * secondNumber;
+
+        case "-":
+            return firstNumber - secondNumber;
+         
+        case "+":
+            return firstNumber + secondNumber;
+        
+        case "/":
+
+        if (secondNumber  !== 0)    {
+            return firstNumber / secondNumber;
+        }
+        else {
+            console.log("Error:  " + errorMessage);
+        }
+         default:
+            console.log("Error: " + error);
+    }
+}
 // 2. Use console.log to print the calculator header
 
 // TODO: Implement the calculator logic
@@ -14,10 +41,15 @@
 // 4. Return the result of the calculation
 
 // TODO: Test the calculator
-// 1. Test with firstNumber = 10, secondNumber = 5, operation = "+"
+// 1. Test with firstNumber = 10, secondNumber = 5f, operation = "+"
 // 2. Display the result in format: "Result: num1 op num2 = result"
 // 3. Test with firstNumber = 20, secondNumber = 4, operation = "*"
 // 4. Display the result
+
+console.log(calculate(10, 5, "+"));
+console.log(calculate(20, 2, "*"));
+console.log(calculate(2, 0, "/"));
+console.log(calculate(2, 2, "%"));
 
 // TODO: Handle error cases
 // 1. Test division by zero and display appropriate error message
